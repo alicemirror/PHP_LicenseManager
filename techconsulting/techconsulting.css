@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+/* Croatia COM 2000 style version */
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	color: #679b00;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: justify;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #efefef;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this fixed width container surrounds the other divs ~~ */
+.container {
+	width: 760px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: #679b00;
+	height: 54px;
+	width: auto;
+	margin: 2px;
+	font: bold normal xx-large/normal Verdana, Geneva, sans-serif;
+	text-transform: capitalize;
+	text-align: center;
+	border-right-width: thin;
+	border-bottom-style: dashed;
+	border-bottom-width:thin;
+	letter-spacing: normal;
+	vertical-align: middle;
+	word-spacing: normal;
+	color: #efefef;
+}
+
+/* This is the form class */
+.form {
+	font: normal small/normal Verdana, Geneva, sans-serif;
+	text-transform: none;
+	text-align: justify;
+	border-bottom-style: dashed;
+	letter-spacing: normal;
+	vertical-align: middle;
+	word-spacing: normal;
+	color: #033e6b;
+	background: #c9f76f;
+	padding: 15px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: dashed;
+	font-size: large;
+	font-weight: bold;
+}
+
+/* This is the form text class */
+.form_text {
+	font: normal small/normal Verdana, Geneva, sans-serif;
+	text-transform: none;
+	text-align: justify;
+	letter-spacing: normal;
+	vertical-align: middle;
+	word-spacing: normal;
+	color: #06C;
+	padding: 15px;
+	font-size: large;
+	font-weight: bold;
+}
+
+/* This is the form field */
+.form_field {
+	font: normal small/normal Verdana, Geneva, sans-serif;
+	text-transform: none;
+	text-align: justify;
+	letter-spacing: normal;
+	vertical-align: middle;
+	word-spacing: normal;
+	color: #333;
+	background: #FFF;
+	padding: 5px;
+	font-size: large;
+	font-weight: bold;
+}
+
+/* This is the form field */
+.form_button {
+	font: normal small/normal Verdana, Geneva, sans-serif;
+	text-transform: capitalize;
+	text-align: center;
+	letter-spacing: normal;
+	vertical-align: middle;
+	word-spacing: normal;
+	color: #06C;
+	background: #FFF;
+	font-size: x-large;
+	font-weight: bold;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 48px;
+	width: auto;
+	background-color: #EEE;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	line-height: normal;
+	font-variant: small-caps;
+	display: inline;
+}
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+.content {
+	padding: 10px 0;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #679b00;
+	color: #efefef;
+	border-top-width: thin;
+	border-top-style: dashed;
+	text-align: center;
+	font: x-small Verdana, Geneva, sans-serif;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
